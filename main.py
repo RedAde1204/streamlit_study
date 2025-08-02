@@ -5,7 +5,8 @@ import streamlit as st
 pages={
     'algorithm':[
         st.Page('1.py', title='two'),
-        st.Page('2.py', title='secondone')
+        st.Page('2.py', title='secondone'),
+        st.Page('august2.py', title='8월2일 숙제(완탐:checkbox,radio,code)')
         ]
     }
 pg=st.navigation(pages)
