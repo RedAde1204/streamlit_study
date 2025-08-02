@@ -1,31 +1,12 @@
 import streamlit as st
 
-st.title('남기현.')
+choice=st.radio('아무거나 골라봐',['사과','바나나','딸기','키위'])
+st.write(choice)
 
-st.header('자기소개')
-st.write('이름: 남기현')
-st.write('나이: 14')
-st.write('성별: 남자')
-st.write('취미: 레슬링')
+if choice=='사과':
+    st.write('맞다')
+else:
+    st.write("틀리다")
 
-st.header('코딩 실력')
-st.write('파이썬')
-# st.image('http://mazassumnida.wtf/api/v2/generate_badge?boj=josh1204')
-st.markdown(
-    """
-        <a href="https://solved.ac/profile/josh1204">
-            <image src="http://mazassumnida.wtf/api/v2/generate_badge?boj=josh1204"/>
-        </a>
-    """,
-    unsafe_allow_html=True
-)
 
-st.header('퀴즈')
-quiz=st.radio('다음중 내가 안가본 나라는?',['한국','중국','일본'])
-if st.button('정답확인'):
-    if quiz=='일본':
-        st.success('정답')
-    else:
-        st.error('정답아님')
-
-st.audio('Soda Pop.mp3',autoplay=True)
+st.selectbox('선택해',['안녕하세요','저는 남기현','입니다.'])
